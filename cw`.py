@@ -22,15 +22,10 @@ def triple_double(num1, num2):
     num1 = str(num1)
     num2 = str(num2)
 
-    for i in triple:
+    for index,i in enumerate(triple):
         if i in num1:
-            for j in double:
-                if j in num2:
-                    return 1
-                elif j=="99":
-                    break
-                else:
-                    continue
+            if double[index] in num2:
+                return 1
         elif i == "999":
             break
         else:
@@ -38,6 +33,9 @@ def triple_double(num1, num2):
 
 
     return 0
+
+
+
 
 
 print(triple_double(333, 33))
